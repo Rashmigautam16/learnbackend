@@ -1,8 +1,9 @@
 const express=require("express");
 const {connection}=require("./configs/db.js")
 const {userRoute}=require("./routes/routes.js")
-const {noteRouter}=require("./notes/notes")
-const {authentication}=require("./middlewares/authentication")
+const {noteRouter}=require("./notes/notes");
+const { authentication } = require("./middlewares/authenticate.js");
+
 require('dotenv').config()
 
 const app= express()
